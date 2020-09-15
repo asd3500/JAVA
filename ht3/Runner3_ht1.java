@@ -1,5 +1,5 @@
 /**
- * Task #1
+ * Task #1 (lesson3)
  * @author Alexander Butkevich
  */
 public class Runner3_ht1 {
@@ -8,6 +8,7 @@ public class Runner3_ht1 {
      */
     public static void main(String[] args) {
 
+        // исходная строка
         String str = "A rolling stone gathers no moss";
         System.out.println("str: " + str);
 

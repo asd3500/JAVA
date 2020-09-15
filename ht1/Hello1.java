@@ -1,5 +1,5 @@
 /**
- * Task #1
+ * Task #1 (lesson1)
  * @author Alexander Butkevich
  */
 public class Hello1 {

@@ -1,5 +1,5 @@
 /**
- * Task #5
+ * Task #5 (lesson1)
  * @author Alexander Butkevich
  */
 public class Runner1_ht5 {

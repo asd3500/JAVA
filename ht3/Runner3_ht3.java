@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Task #3
+ * Task #3 (lesson3)
  * @author Alexander Butkevich
  */
 public class Runner3_ht3 {

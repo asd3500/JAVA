@@ -1,5 +1,5 @@
 /**
- * Task #4
+ * Task #4 (lesson3)
  * @author Alexander Butkevich
  */
 public class Runner3_ht4 {
@@ -8,6 +8,7 @@ public class Runner3_ht4 {
      */
     public static void main(String[] args) {
 
+        // создание строки и массива слов из строки
         String str = "All good things must come to an end";
         System.out.println("str: " + str);
         String[] words = str.split(" ");
