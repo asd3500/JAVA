@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * Task #1 (lesson2)
+ * Task #2 (lesson2)
  * @author Alexander Butkevich
  */
 public class Runner2_ht2 {
@@ -37,6 +37,7 @@ public class Runner2_ht2 {
             System.out.printf("%s%5.2f", (i > 0 ? " " : ""), arr[i]);
         }
         System.out.println("]");
+
 
     }
 }
