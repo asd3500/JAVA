@@ -12,19 +12,21 @@ public class Runner2_ht3 {
     public static void main(String[] args) {
 
         // объявление массива
-        int[] arr = null;
+        int[] arr;
 
         // задание размера с консоли
         Scanner sc = new Scanner(System.in);
         System.out.print("input array size: ");
-        int size = sc.nextInt();
+        int size = 0;
+        while(size <= 0 || size > 50) {
+            size = sc.nextInt();
+            if (size <= 0) System.out.print("incorrect value, repeat: ");
+        }
+
 
         // создание массива
-        if (size>0) {
-            arr = new int[size];
-        } else {
-            size = 0;
-        }
+        arr = new int[size];
+
 
         // инициализация массива
         for (int i = 0; i < arr.length; i++) {
@@ -45,22 +47,22 @@ public class Runner2_ht3 {
         // переменные результата
         double avgAux = 0.;
         int avgAuxCnt = 0;
-        int[] arr2 = size > 0 ? new int[arr.length] : null;
+        int[] arr2 = new int[arr.length];
         size = 0;
 
-        for (int i = 0; i < arr.length; i++) {
+        for (int item: arr) {
 
             // вычисление ср. ар. элем. кратных 5 и не кратных 10
-            if (arr[i] % 5 == 0 && arr[i] % 10 != 0) {
-                avgAux += arr[i];
+            if (item % 5 == 0 && item % 10 != 0) {
+                avgAux += item;
                 avgAuxCnt++;
             }
 
             // формирование второго массива из элем. первого
             // отрицательные, кратные 3, четные положительные
-            if ((arr[i] < 0 && arr[i] % 3 == 0) ||
-                    (arr[i] > 0 && arr[i] % 2 == 0)) {
-                arr2[size++] = arr[i];
+            if ((item < 0 && item % 3 == 0) ||
+                    (item > 0 && item % 2 == 0)) {
+                arr2[size++] = item;
             }
         }
 
@@ -99,11 +101,9 @@ public class Runner2_ht3 {
             for (int i = 0; i < arr2.length; i++) {
                 System.out.printf("%s%5d", (i == 0 ? "" : ", "), arr2[i]);
             }
+        } else {
+            System.out.println("no elements for new array");
         }
-
-
-
-
 
         sc.close();
     }
