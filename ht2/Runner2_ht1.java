@@ -23,7 +23,7 @@ public class Runner2_ht1 {
         for (int i = 0; i < arr.length; i++) {
 
             // инициализация массива случайными значениями
-            arr[i] = (int)(Math.random() * (maxRand - minRand + 1) + minRand);
+            arr[i] = (int)(Math.random() * (maxRand - minRand + 1)) + minRand;
 
             // вычисление суммы элементов с четными/нечетными номерами
             if ((i+1)%2 == 0) {

@@ -35,14 +35,13 @@ public class Runner3_ht3 {
                 longestInd = i;
             }
         }
-        String longestWord = new String(words[longestInd]);
+        String longestWord = words[longestInd].toLowerCase();
         System.out.printf("longest word: %d) %s - %d letter%c",
-                longestInd + 1, longestWord, longestWord.length(),
+                longestInd + 1, words[longestInd], longestWord.length(),
                 (longestWord.length() > 1 ? 's' : ' '));
 
         // количество букв 'v' в самом длинном слове
         int count = 0;
-        longestWord = longestWord.toLowerCase();
         for (int i = 0; i < words[longestInd].length(); i++) {
             if(longestWord.charAt(i) == 'v') {
                 count++;

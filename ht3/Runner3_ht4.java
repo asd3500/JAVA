@@ -13,10 +13,11 @@ public class Runner3_ht4 {
         System.out.println("str: " + str);
         String[] words = str.split(" ");
 
+        // вспомогательные переменные
         int longestInd = 0;
         int shortestInd = 0;
 
-        // поиск самых длинного и короткого слов
+        // поиск самых длинного, короткого слов
         for (int i = 0; i < words.length; i++) {
             if(words[i].length() >= words[longestInd].length()) {
                 longestInd = i;
@@ -30,18 +31,19 @@ public class Runner3_ht4 {
         String swap = words[longestInd];
         words[longestInd] = words[shortestInd];
         words[shortestInd] = swap;
-        String newStr = "";
-        for (int i = 0; i < words.length; i++) {
-            newStr += words[i] + " ";
+        StringBuilder newStr = new StringBuilder();
+        for (String word : words) {
+            newStr.append(word).append(" ");
         }
         System.out.println("new str: " + newStr);
 
         // вывод слов, которые начинаются с буквы, как у первого самого короткого слова
         words = str.split(" ");
-        System.out.printf("words which start with letter '%c':\n", words[shortestInd].toLowerCase().charAt(0));
+        char firstLetterL = words[shortestInd].toLowerCase().charAt(0);
+        char firstLetterU = words[shortestInd].toUpperCase().charAt(0);
+        System.out.printf("words which start with letter '%c':\n", firstLetterL);
         for (int i = 0; i < words.length; i++) {
-            words[i] = words[i].toLowerCase();
-            if(words[i].charAt(0) == words[shortestInd].charAt(0)) {
+            if(words[i].charAt(0) == firstLetterL || words[i].charAt(0) == firstLetterU) {
                 System.out.printf("\t%d) %s\n", i + 1, words[i]);
             }
         }

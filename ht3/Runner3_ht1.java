@@ -27,10 +27,10 @@ public class Runner3_ht1 {
         // слова из менее чем 3-х символов
         String[] words = str.split(" ");
         cnt = 0;
-        for (int i = 0; i < words.length; i++) {
-            if(words[i].length()<3) {
+        for (String word : words) {
+            if(word.length()<3) {
                 cnt++;
-                System.out.printf("%d: %s\n",cnt,words[i]);
+                System.out.printf("%d: %s\n",cnt,word);
             }
         }
         if(cnt==0) {

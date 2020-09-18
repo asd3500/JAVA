@@ -13,6 +13,7 @@ public class Runner3_ht2 {
         System.out.println("str: " + str);
         String[] words = str.split(" ");
 
+        // вспомогательные переменные
         int longestInd = 0;
         int shortestInd = 0;
         int longestSymInd = -1;
@@ -27,6 +28,7 @@ public class Runner3_ht2 {
             for (int j = 0; j < wordLen/2; j++) {
                 if(words[i].charAt(j) != words[i].charAt(wordLen - j - 1)) {
                     isSym = false;
+                    break;
                 }
             }
 
@@ -54,6 +56,7 @@ public class Runner3_ht2 {
             }
         }
 
+        // вывод результатов в консоль
         System.out.println("last longest word: " + words[longestInd]);
         System.out.println("first shortest word: " + words[shortestInd]);
         System.out.println("first longest symmetrical word: " + (longestSymInd == - 1 ? "\"no symmetrical words\"" : words[longestSymInd]));

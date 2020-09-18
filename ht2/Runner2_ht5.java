@@ -6,7 +6,7 @@ import java.util.Arrays;
  */
 public class Runner2_ht5 {
     /**
-     * работа с двумерным массивом int[5][5]
+     * работа с двумерным массивом int[5][5] #1
      */
     public static void main(String[] args) {
 
@@ -30,7 +30,7 @@ public class Runner2_ht5 {
             for (int j = 0; j < arr[i].length; j++) {
 
                 // инициализация массива случайными значениями
-                arr[i][j] = (int)(Math.random() * (maxRand - minRand + 1) + minRand);
+                arr[i][j] = (int)(Math.random() * (maxRand - minRand + 1)) + minRand;
 
                 // расчет сумм: всего массива, строк, столбцов
                 sum += arr[i][j];
@@ -64,7 +64,7 @@ public class Runner2_ht5 {
         }
 
         // вывод суммы всего массива
-        System.out.printf("|%7d - total\n", sum);
+        System.out.printf("|%7d <- total\n", sum);
 
         // замена местами максимального, минимального элементов
         int tmp = arr[minRow][minCol];

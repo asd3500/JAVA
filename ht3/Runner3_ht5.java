@@ -15,8 +15,8 @@ public class Runner3_ht5 {
         String[] words = str.split(" ");
 
         // переменные для результата
-        String str1 = "";
-        String str2 = "";
+        StringBuilder str1 = new StringBuilder();
+        StringBuilder str2 = new StringBuilder();
 
         // перебор слов
         for (int i = 0; i < words.length; i++) {
@@ -24,8 +24,8 @@ public class Runner3_ht5 {
 
             // добавление пробелов в строки результатов начиная со второго слова
             if (i>0) {
-                str1 += " ";
-                str2 += " ";
+                str1.append(" ");
+                str2.append(" ");
             }
 
             // перебор букв в слове
@@ -43,39 +43,39 @@ public class Runner3_ht5 {
                     // замена арифметических знаков на их названия
                     switch (words[i].charAt(j)) {
                         case '+':
-                            str1 += "plus";
-                            str2 += "minus";
+                            str1.append("plus");
+                            str2.append("minus");
                             break;
                         case '-':
-                            str1 += "minus";
-                            str2 += "plus";
+                            str1.append("minus");
+                            str2.append("plus");
                             break;
                         case  '*':
-                            str1 += "multiply";
-                            str2 += "divide";
+                            str1.append("multiply");
+                            str2.append("divide");
                             break;
                         case '/':
-                            str1 += "divide";
-                            str2 += "multiply";
+                            str1.append("divide");
+                            str2.append("multiply");
                             break;
 
-                            // если между числами не арифметический знак - добавить символ рез. строку
+                            // если между числами не арифметический знак - добавить символ в рез. строку
                         default:
-                            str1 += words[i].charAt(j);
-                            str2 += words[i].charAt(j);
+                            str1.append(words[i].charAt(j));
+                            str2.append(words[i].charAt(j));
                     }
 
                 } else {
 
                     // добавление остальных символов
-                    str1 += words[i].charAt(j);
-                    str2 += words[i].charAt(j);
+                    str1.append(words[i].charAt(j));
+                    str2.append(words[i].charAt(j));
                 }
             }
         }
 
         // вывод результата
-        System.out.printf("str1: %s\n", str1);
-        System.out.printf("str2: %s\n", str2);
+        System.out.printf("str1: %s\n", str1.toString());
+        System.out.printf("str2: %s\n", str2.toString());
     }
 }
