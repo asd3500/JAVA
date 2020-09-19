@@ -10,7 +10,7 @@ public class Runner3_ht4 {
 
         // создание строки и массива слов из строки
         String str = "All good things must come to an end";
-        System.out.println("str: " + str);
+        System.out.println("str:     " + str);
         String[] words = str.split(" ");
 
         // вспомогательные переменные
@@ -35,6 +35,7 @@ public class Runner3_ht4 {
         for (String word : words) {
             newStr.append(word).append(" ");
         }
+        newStr.delete(newStr.length()-1, newStr.length());
         System.out.println("new str: " + newStr);
 
         // вывод слов, которые начинаются с буквы, как у первого самого короткого слова

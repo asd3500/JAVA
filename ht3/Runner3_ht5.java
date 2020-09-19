@@ -12,6 +12,7 @@ public class Runner3_ht5 {
         // создание строки и массива слов из строки
         String str = "one two 3+4 five six 7*8 nine 9%10 ten two2-5five 6/9+5-4*2";
         System.out.printf("str: %s\n", str);
+
         String[] words = str.split(" ");
 
         // переменные для результата
@@ -38,7 +39,7 @@ public class Runner3_ht5 {
                     && words[i].charAt(j - 1) >= '0'
                     && words[i].charAt(j - 1) <= '9'
                     && words[i].charAt(j + 1) >= '0'
-                    && words[i].charAt(j - 1) <= '9') {
+                    && words[i].charAt(j + 1) <= '9') {
 
                     // замена арифметических знаков на их названия
                     switch (words[i].charAt(j)) {

@@ -43,7 +43,7 @@ public class Runner3_ht2 {
             }
 
             if(isSym) {
-
+                //System.out.println(words[i]);
                 // поиск первого самого длинного симметричного слова
                 if(longestSymInd == -1 || wordLen > words[longestSymInd].length()) {
                     longestSymInd = i;
