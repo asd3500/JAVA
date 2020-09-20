@@ -31,12 +31,10 @@ public class Runner3_ht4 {
         String swap = words[longestInd];
         words[longestInd] = words[shortestInd];
         words[shortestInd] = swap;
-        StringBuilder newStr = new StringBuilder();
-        for (String word : words) {
-            newStr.append(word).append(" ");
-        }
-        newStr.delete(newStr.length()-1, newStr.length());
-        System.out.println("new str: " + newStr);
+
+        // вывод полученной строки
+        String resultStr = String.join(" ", words);
+        System.out.println("new str: " + resultStr);
 
         // вывод слов, которые начинаются с буквы, как у первого самого короткого слова
         words = str.split(" ");

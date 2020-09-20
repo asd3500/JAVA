@@ -14,6 +14,8 @@ public class Runner3_ht3 {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter string:");
         String str = sc.nextLine();
+        sc.close();
+
 
         // создание массива слов из строки
         String[] words = str.split(" ");
@@ -64,6 +66,5 @@ public class Runner3_ht3 {
             System.out.println("\tno such words");
         }
 
-        sc.close();
     }
 }

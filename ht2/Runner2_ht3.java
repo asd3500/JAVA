@@ -33,6 +33,7 @@ public class Runner2_ht3 {
             System.out.printf("array item #%d = ", i + 1);
             arr[i] = sc.nextInt();
         }
+        sc.close();
 
         // вывод значений массива в консоль
         System.out.print("array:     ");
@@ -45,66 +46,65 @@ public class Runner2_ht3 {
         }
 
         // переменные результата
-        double avgAux = 0.;
-        int avgAuxCnt = 0;
-        int[] arr2 = new int[arr.length];
+        double average = 0.;
+        int averageCnt = 0;
+        int[] resultArr = new int[arr.length];
         size = 0;
 
         for (int item: arr) {
 
             // вычисление ср. ар. элем. кратных 5 и не кратных 10
             if (item % 5 == 0 && item % 10 != 0) {
-                avgAux += item;
-                avgAuxCnt++;
+                average += item;
+                averageCnt++;
             }
 
             // формирование второго массива из элем. первого
             // отрицательные, кратные 3, четные положительные
             if ((item < 0 && item % 3 == 0) ||
                     (item > 0 && item % 2 == 0)) {
-                arr2[size++] = item;
+                resultArr[size++] = item;
             }
         }
 
         // вывод результатов
-        if (avgAuxCnt > 0) {
-            System.out.printf("\n\nresult = %.2f\n", avgAux/avgAuxCnt);
+        if (averageCnt > 0) {
+            System.out.printf("\n\nresult = %.2f\n", average/averageCnt);
         } else {
             System.out.println("\nout of result");
         }
 
         if (size > 0) {
-            arr2 = Arrays.copyOf(arr2, size);
+            resultArr = Arrays.copyOf(resultArr, size);
 
             // вывод полученного массива в консоль
-            System.out.print("\nnew array:     ");
-            for (int i = 0; i < arr2.length; i++) {
-                System.out.printf("%s%5d", (i == 0 ? "" : ", "), arr2[i]);
+            System.out.print("\nnew array:        ");
+            for (int i = 0; i < resultArr.length; i++) {
+                System.out.printf("%s%5d", (i == 0 ? "" : ", "), resultArr[i]);
             }
 
             // сортировка массива по убыванию
             boolean flag = true;
-            for (int i = 1; i < arr2.length && flag; i++) {
+            for (int i = 1; i < resultArr.length && flag; i++) {
                 flag = false;
-                for (int j = 0; j < (arr2.length - i); j++) {
-                    if (arr2[j] < arr2[j + 1]) {
-                        int swap = arr2[j];
-                        arr2[j] = arr2[j + 1];
-                        arr2[j +1] = swap;
+                for (int j = 0; j < (resultArr.length - i); j++) {
+                    if (resultArr[j] < resultArr[j + 1]) {
+                        int swap = resultArr[j];
+                        resultArr[j] = resultArr[j + 1];
+                        resultArr[j +1] = swap;
                         flag = true;
                     }
                 }
             }
 
             // вывод осортированного массива
-            System.out.print("\nrev new array: ");
-            for (int i = 0; i < arr2.length; i++) {
-                System.out.printf("%s%5d", (i == 0 ? "" : ", "), arr2[i]);
+            System.out.print("\nsorted new array: ");
+            for (int i = 0; i < resultArr.length; i++) {
+                System.out.printf("%s%5d", (i == 0 ? "" : ", "), resultArr[i]);
             }
         } else {
             System.out.println("no elements for new array");
         }
 
-        sc.close();
     }
 }

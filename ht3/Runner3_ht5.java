@@ -9,74 +9,62 @@ public class Runner3_ht5 {
      */
     public static void main(String[] args) {
 
-        // создание строки и массива слов из строки
+        // создание строки
         String str = "one two 3+4 five six 7*8 nine 9%10 ten two2-5five 6/9+5-4*2";
         System.out.printf("str: %s\n", str);
 
-        String[] words = str.split(" ");
-
         // переменные для результата
-        StringBuilder str1 = new StringBuilder();
-        StringBuilder str2 = new StringBuilder();
+        StringBuilder resultStr1 = new StringBuilder();
+        StringBuilder resultStr2 = new StringBuilder();
 
-        // перебор слов
-        for (int i = 0; i < words.length; i++) {
-            int wordLength = words[i].length();
 
-            // добавление пробелов в строки результатов начиная со второго слова
-            if (i>0) {
-                str1.append(" ");
-                str2.append(" ");
-            }
+        // перебор символов
+        for (int i = 0; i < str.length(); i++) {
 
-            // перебор букв в слове
-            for (int j = 0; j < wordLength; j++) {
+            // поиск выполнения условия
+            // 0    1   ...     i-1     i       i+1
+            //                  0-9     +-*/    0-9
+            if (i > 0 && i < str.length() - 1 &&
+                str.charAt(i - 1) >= '0' &&
+                str.charAt(i - 1) <= '9' &&
+                str.charAt(i + 1) >= '0' &&
+                str.charAt(i + 1) <= '9') {
 
-                // поиск выполнения условия
-                // 0    1   ...     j-1     j       j+1
-                //                  0-9     +-*/    0-9
-                if (j > 0 && j < wordLength - 1
-                    && words[i].charAt(j - 1) >= '0'
-                    && words[i].charAt(j - 1) <= '9'
-                    && words[i].charAt(j + 1) >= '0'
-                    && words[i].charAt(j + 1) <= '9') {
+                // замена арифметических знаков на их названия
+                switch (str.charAt(i)) {
+                    case '+':
+                        resultStr1.append("plus");
+                        resultStr2.append("minus");
+                        break;
+                    case '-':
+                        resultStr1.append("minus");
+                        resultStr2.append("plus");
+                        break;
+                    case  '*':
+                        resultStr1.append("multiply");
+                        resultStr2.append("divide");
+                        break;
+                    case '/':
+                        resultStr1.append("divide");
+                        resultStr2.append("multiply");
+                        break;
 
-                    // замена арифметических знаков на их названия
-                    switch (words[i].charAt(j)) {
-                        case '+':
-                            str1.append("plus");
-                            str2.append("minus");
-                            break;
-                        case '-':
-                            str1.append("minus");
-                            str2.append("plus");
-                            break;
-                        case  '*':
-                            str1.append("multiply");
-                            str2.append("divide");
-                            break;
-                        case '/':
-                            str1.append("divide");
-                            str2.append("multiply");
-                            break;
-
-                            // если между числами не арифметический знак - добавить символ в рез. строку
-                        default:
-                            str1.append(words[i].charAt(j));
-                            str2.append(words[i].charAt(j));
+                    // если между числами не арифметический знак - добавить символ в рез. строку
+                    default:
+                        resultStr1.append(str.charAt(i));
+                        resultStr2.append(str.charAt(i));
                     }
 
                 } else {
 
                     // добавление остальных символов
-                    str1.append(words[i].charAt(j));
-                    str2.append(words[i].charAt(j));
+                    resultStr1.append(str.charAt(i));
+                    resultStr2.append(str.charAt(i));
                 }
             }
-        }
 
         // вывод результата
-        System.out.printf("str1: %s\n", str1.toString());
-        System.out.printf("str2: %s\n", str2.toString());
+        System.out.printf("result string 1: %s\n", resultStr1.toString());
+        System.out.printf("result string 2: %s\n", resultStr2.toString());
     }
 }

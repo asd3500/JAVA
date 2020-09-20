@@ -23,7 +23,7 @@ public class Runner2_ht5 {
         int maxRow = 0;
         int minCol = 0;
         int maxCol = 0;
-        boolean[] swap = new boolean[arr.length];
+        boolean[] swappedRow = new boolean[arr.length];
 
 
         for (int i = 0; i < arr.length; i++) {
@@ -88,12 +88,12 @@ public class Runner2_ht5 {
                 }
             }
             if (fZeroInd != -1 && lNegInd != -1) {
-                swap[i] = true;
+                swappedRow[i] = true;
                 tmp = arr[i][fZeroInd];
                 arr[i][fZeroInd] = arr[i][lNegInd];
                 arr[i][lNegInd] = tmp;
             } else {
-                swap[i] = false;
+                swappedRow[i] = false;
             }
         }
 
@@ -103,7 +103,7 @@ public class Runner2_ht5 {
             for (int j = 0; j < arr[i].length; j++) {
                 System.out.printf("%7d", arr[i][j]);
             }
-            if (swap[i]) {
+            if (swappedRow[i]) {
                 System.out.println("   1st zero swapped with last negative");
             } else {
                 System.out.println();

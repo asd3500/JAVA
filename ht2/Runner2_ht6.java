@@ -18,7 +18,7 @@ public class Runner2_ht6 {
         int maxRand = 25;
         double avgAbovePD = 0.;
         double avgAboveSD = 0.;
-        int[] minCol = null;
+        int[] minCol = new int[arr[0].length];  Arrays.fill(minCol, Integer.MAX_VALUE);
         int sumMinCol = 0;
         int maxNeg = 0;
         int min = Integer.MAX_VALUE;
@@ -38,10 +38,8 @@ public class Runner2_ht6 {
                 }
 
                 // минимальные элементы столбцов матрицы
-                if (i > 0) {
-                    if (arr[i][j] < minCol[j]) {
-                        minCol[j] = arr[i][j];
-                    }
+                if (arr[i][j] < minCol[j]) {
+                    minCol[j] = arr[i][j];
                 }
 
                 // максимальный отрицательный элемент
@@ -55,10 +53,6 @@ public class Runner2_ht6 {
                 }
             }
 
-            // инициализация массива минимальных элементов столбцов, первой строкой матрицы
-            if (i == 0) {
-                minCol = Arrays.copyOf(arr[0], arr[0].length);
-            }
         }
 
         // средние арифметические значения элементов стоящих выше главной/побочной диагонали

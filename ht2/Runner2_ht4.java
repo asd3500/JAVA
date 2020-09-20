@@ -49,6 +49,7 @@ public class Runner2_ht4 {
                 System.out.print("incorrect value, repeat: ");
             }
         }
+        sc.close();
 
         // приведение введенных номеров строк/столбцов к индексам
         k--; s--;
@@ -68,6 +69,5 @@ public class Runner2_ht4 {
             System.out.println();
         }
 
-        sc.close();
     }
 }

@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 /**
- * Task #6 (lesson2)
+ * Task #7 (lesson2)
  * @author Alexander Butkevich
  */
 public class Runner2_ht7 {

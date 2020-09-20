@@ -12,21 +12,14 @@ public class Runner3_ht1 {
         String str = "A rolling stone gathers no moss";
         System.out.println("str: " + str);
 
-        // #1 количество слов
-        System.out.println(str.split(" ").length + " words");
+        // массив слов
+        String[] words = str.split(" ");
 
-        // #2 количество слов
-        int cnt = 1;
-        for (int i = 0; i < str.length(); i++) {
-            if(str.charAt(i)==' ') {
-                cnt++;
-            }
-        }
-        System.out.println(cnt+" words");
+        // количество слов
+        System.out.println(words.length + " words");
 
         // слова из менее чем 3-х символов
-        String[] words = str.split(" ");
-        cnt = 0;
+        int cnt = 0;
         for (String word : words) {
             if(word.length()<3) {
                 cnt++;
