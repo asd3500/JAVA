@@ -3,9 +3,12 @@ package exm2.by.itClass;
 // для классов только public или default
 public class Person4 {
     private String name;
-    private int age; // generate hk - Alt+Insert
+    protected int age; // generate hk - Alt+Insert
 
-    public Person4() {}
+    public Person4() {
+        name = "";
+        age = 0;
+    }
 
     public Person4(String paramName, int paramAge) {
         name = paramName;

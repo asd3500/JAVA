@@ -26,7 +26,17 @@ public class Runner4_exm2 {
         System.out.println("person: " + alex.info());
         System.out.println("name: " + alex.getName());
 
-        Student4 vasya = new Student4("Vasya", 24, "Math");
-        System.out.println(vasya.info());
+        Student4 student1 = new Student4( "Math");
+        System.out.println(student1.info());
+
+
+        Student4 student2 = new Student4("Vasya", 24, "Phis");
+        System.out.println(student2.info());
+
+        Person4 object = null;
+        object = student1;
+        object = new Student4();
+
+        System.out.println(object.info());
     }
 }

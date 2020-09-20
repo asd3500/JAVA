@@ -5,19 +5,27 @@ public class Student4 extends Person4{
 
     public Student4() {
         super();
+        faculty = "";
     }
 
-    public Student4(String paramName, int paramAge, String faculty) {
-        super(paramName, paramAge);
-        this.faculty = faculty;
+    public Student4(String paramFaculty) {
+        super();
+        faculty = paramFaculty;
+    }
+
+    public Student4(String paramName, int paramAge, String paramFaculty) {
+        // super(paramName, paramAge);
+        setName(paramName); // name - private
+        age = paramAge; // age - protected
+        faculty = paramFaculty;
     }
 
     public String getFaculty() {
         return faculty;
     }
 
-    public void setFaculty(String faculty) {
-        this.faculty = faculty;
+    public void setFaculty(String paramFaculty) {
+        faculty = paramFaculty;
     }
 
     public String info() {
