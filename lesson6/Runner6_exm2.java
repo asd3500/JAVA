@@ -1,6 +1,10 @@
 import by.itClass.exm2.Figure6;
 import by.itClass.exm2.Rectangle6;
 
+/**
+ * ABSTRACT
+ * @author Alexander Butkevich
+ */
 public class Runner6_exm2 {
     public static void main(String[] args) {
 

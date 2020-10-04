@@ -1,6 +1,6 @@
 import by.itClass.Car5;
 /**
- * ООП
+ * OOP
  * @author Alexander Butkevich
  */
 public class Runner5_exm2 {

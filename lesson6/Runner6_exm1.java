@@ -4,6 +4,10 @@ import by.itClass.exm1.User6;
 
 import java.util.Arrays;
 
+/**
+ * ENUM
+ * @author Alexander Butkevich
+ */
 public class Runner6_exm1 {
     public static void main(String[] args) {
         User6 user1 = new User6("Admin", "12345", "ADMIN");

@@ -4,7 +4,7 @@ import by.itClass.Car5;
 import java.sql.SQLOutput;
 
 /**
- * ООП
+ * OOP
  * @author Alexander Butkevich
  */
 public class Runner5_exm1 {

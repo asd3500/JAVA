@@ -1,7 +1,7 @@
 package exm1;
 
 /**
- * ООП
+ * OOP
  * @author Alexander Butkevich
  */
 public class Runner4_exm1 {

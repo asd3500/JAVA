@@ -4,7 +4,7 @@ import by.itClass.User5;
 import java.util.Arrays;
 
 /**
- * ООП
+ * OOP
  * @author Alexander Butkevich
  */
 public class Runner5_exm3 {

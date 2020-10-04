@@ -4,7 +4,7 @@ import exm2.by.itClass.Person4;
 import exm2.by.itClass.Student4;
 
 /**
- * ООП
+ * OOP
  * @author Alexander Butkevich
  */
 public class Runner4_exm2 {
