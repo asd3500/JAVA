@@ -3,7 +3,7 @@ import by.itClass.MyClass8;
 import java.util.Comparator;
 
 /**
- *
+ * anonymous classes
  * @author Alexander Butkevich
  */
 public class Runner8_exm1 {
