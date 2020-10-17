@@ -2,16 +2,20 @@ package by.itClass;
 
 import java.util.Objects;
 
-public class User10 {
+// Cloneable - интерфейс маркер (отсутствуют методы)
+public class User10 implements Cloneable {
     private int id;
     private String login;
     private String name;
     private int age;
+    private Phone10 phone;
 
     public User10() {
+        phone = new Phone10();
     }
 
     public User10(int id, String login, String name, int age) {
+        this();
         this.id = id;
         this.login = login;
         this.name = name;
@@ -50,6 +54,14 @@ public class User10 {
         this.age = age;
     }
 
+    public Phone10 getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String number) {
+        phone.setNumber(number);
+    }
+
     public String show() {
         return "id=" + id + ", login=" + login +
                 ", name=" + name + ", age=" + age;
@@ -62,6 +74,7 @@ public class User10 {
                 ", login='" + login + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +
+                ", " + phone +
                 '}';
     }
 
@@ -73,7 +86,7 @@ public class User10 {
         User10 user10 = (User10) o;
 
         if (id != user10.id) return false;
-        if (age != user10.age) return false;
+        //if (age != user10.age) return false;
         if (!login.equals(user10.login)) return false;
         return name.equals(user10.name);
     }
@@ -83,7 +96,22 @@ public class User10 {
         int result = id;
         result = 31 * result + login.hashCode();
         result = 31 * result + name.hashCode();
-        result = 31 * result + age;
+        //result = 31 * result + age;
         return result;
+    }
+
+//    public Object clone() throws CloneNotSupportedException {
+//        return super.clone();
+//    }
+
+    // при переопределении метода доступ можно расширить
+    // private, protected -> public
+    // наоборот - нельзя
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        Phone10 phoneCopy = (Phone10) phone.clone();
+        User10 userCopy = (User10) super.clone();
+        userCopy.phone = phoneCopy;
+        return userCopy;
     }
 }
