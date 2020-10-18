@@ -2,6 +2,9 @@ import by.itClass.User10;
 
 import java.lang.reflect.Field;
 
+/**
+ *  equals, hashcode, Class, Field
+ */
 public class Runner10_exm1 {
     public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
         User10 user = new User10(1, "admin", "Alex", 19);

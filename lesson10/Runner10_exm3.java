@@ -1,6 +1,9 @@
 import by.itClass.Phone10;
 import by.itClass.User10;
 
+/**
+ * clone
+ */
 public class Runner10_exm3 {
     public static void main(String[] args) throws CloneNotSupportedException {
         User10 user = new User10(1, "admin", "Alex", 25);

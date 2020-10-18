@@ -1,6 +1,9 @@
 import by.itClass.User10;
 import org.w3c.dom.ls.LSOutput;
 
+/**
+ * clone
+ */
 public class Runner10_exm2 {
     public static void main(String[] args) throws CloneNotSupportedException {
         User10 user1 = new User10(1, "admin", "Alex", 25);
