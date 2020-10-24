@@ -1,5 +1,5 @@
 import by.itClass.Product12;
-import by.itClass.exceptions.NameException;
+import by.itClass.exceptions.NameException12;
 
 public class Runner12_exm3 {
     public static void main(String[] args) { //throws JVM -> e.printStackTrace()
@@ -7,7 +7,7 @@ public class Runner12_exm3 {
         Product12 product = null;
         try {
             product = new Product12("Bread", 1200);
-        } catch (NameException e) {
+        } catch (NameException12 e) {
             e.printStackTrace();
         }
 

@@ -1,7 +1,7 @@
 package by.itClass;
 
-import by.itClass.exceptions.NameException;
-import by.itClass.exceptions.PriceException;
+import by.itClass.exceptions.NameException12;
+import by.itClass.exceptions.PriceException12;
 
 public class Product12 {
     private String name;
@@ -10,7 +10,7 @@ public class Product12 {
     public Product12() {
     }
 
-    public Product12(String name, int price) throws NameException {
+    public Product12(String name, int price) throws NameException12 {
         setName(name);
         setPrice(price);
     }
@@ -19,11 +19,11 @@ public class Product12 {
         return name;
     }
 
-    public void setName(String name) throws NameException{
+    public void setName(String name) throws NameException12 {
         if (!name.isEmpty()) {
             this.name = name;
         } else {
-            throw new NameException("Empty name");
+            throw new NameException12("Empty name");
         }
     }
 
@@ -36,8 +36,8 @@ public class Product12 {
             this.price = price;
         } else {
             try {
-                throw new PriceException("Negative price", price);
-            } catch (PriceException e) {
+                throw new PriceException12("Negative price", price);
+            } catch (PriceException12 e) {
                 System.err.println(e.getMessage());
             }
         }
