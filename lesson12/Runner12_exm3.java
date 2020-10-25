@@ -1,6 +1,8 @@
 import by.itClass.Product12;
 import by.itClass.exceptions.NameException12;
-
+/**
+ * exception
+ */
 public class Runner12_exm3 {
     public static void main(String[] args) { //throws JVM -> e.printStackTrace()
 

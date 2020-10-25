@@ -1,5 +1,7 @@
 import by.itClass.MyClass12;
-
+/**
+ * exception
+ */
 public class Runner12_exm2 {
     public static void main(String[] args) {
 
