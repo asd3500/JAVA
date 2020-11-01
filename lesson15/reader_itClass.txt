@@ -1,0 +1,4 @@
+Hello Reader from Java!!!
+Ёпрст
+12,5
+450

@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.util.Arrays;
 
 /**
- * Files
+ * InputStream (byte)
  */
 public class Runner13_exm2 {
     public static void main(String[] args) {

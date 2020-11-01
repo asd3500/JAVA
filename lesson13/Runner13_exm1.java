@@ -1,7 +1,7 @@
 import java.io.*;
 
 /**
- * Files
+ * OutputStream (byte)
  */
 public class Runner13_exm1 {
     public static void main(String[] args) {
