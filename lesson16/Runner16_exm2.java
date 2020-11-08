@@ -3,7 +3,7 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Collection
+ * Collection, ArrayList
  */
 public class Runner16_exm2 {
     public static void main(String[] args) {
