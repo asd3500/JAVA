@@ -1,0 +1,10 @@
+IT;85;90
+IT;;90
+Sorting;21;30
+Sorting;-21;-30
+Sorting;2.1;-30
+Sales;30;48
+Sales
+Marketing;68;95
+;70;20
+IT;;
