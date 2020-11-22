@@ -33,7 +33,22 @@ public class Runner21_exm1 {
         System.out.println(roleMap);
 
         // map key:role, value: List<String> logins
-//        Map<String, List<String>> roleLoginsMap = users2.stream()
+        Map<String, List<String>> stringListMap = new HashMap<>();
+        for(User21 user : users2) {
+            String role = user.getRole();
+            List<String> logins = stringListMap.getOrDefault(role, new ArrayList<>());
+            logins.add(user.getLogin());
+            stringListMap.put(role, logins);
+        }
+        System.out.println(stringListMap);
+
+        stringListMap.clear();
+
+        stringListMap = users2.stream()
+                .collect(Collectors.groupingBy(User21::getRole,
+                        Collectors.mapping(User21::getLogin, Collectors.toList())));
+        System.out.println(stringListMap);
+
 
     }
 }
