@@ -7,5 +7,14 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost/itclass?serverTimezone=Europe/Minsk</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="@localhost" uuid="caaba809-6be1-4382-bdbd-f5d245b66e98">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+      <driver-properties>
+        <property name="serverTimezone" value="Europe/Minsk" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>
