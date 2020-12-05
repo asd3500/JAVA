@@ -1,6 +1,6 @@
 import java.sql.*;
 
-public class Runner23 {
+public class Runner23_exm2 {
     public static void main(String[] args) {
         // JDBC API
         final String DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
@@ -15,15 +15,18 @@ public class Runner23 {
         }
 
         Connection cn = null;
-        Statement st = null;
+        PreparedStatement pst = null;
         ResultSet rs = null;
 
         try {
             cn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            st = cn.createStatement();
-            //st.executeQuery(); // select...
-            //st.executeUpdate(); // delete, update, insert
-            rs = st.executeQuery("select id, login from users");
+            pst = cn.prepareStatement("select id, login from users where id > ? and login like ?");
+            System.out.println(pst);
+            pst.setInt(1,7);
+            pst.setString(2,"us%");
+            System.out.println(pst);
+            rs = pst.executeQuery();
+
 
             while (rs.next()) {
                 int id = rs.getInt("id");
@@ -42,9 +45,9 @@ public class Runner23 {
                     e.printStackTrace();
                 }
             }
-            if (st != null) {
+            if (pst != null) {
                 try {
-                    st.close();
+                    pst.close();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -57,8 +60,6 @@ public class Runner23 {
                 }
             }
         }
-
-
 
     }
 }
