@@ -9,16 +9,17 @@ import java.util.regex.Pattern;
 public class Runner25_ht6 {
     public static void main(String[] args) {
         final String FILE_NAME = "lesson25/itClass.properties";
-        final String REGEX_INDEX = "index(\\d+)";
+        final String REGEX_INDEX = "index(.+)";
         final String HEAD = "sum(";
-        final String EMPTY = "";
+        final String VALUE_KEY = "value";
         final String EQUAL = ")=";
         final char PLUS = '+';
         final char MINUS = '-';
+        double sum = 0;
         int errLines = 0;
 
         Properties properties = new Properties();
-        StringBuilder result = new StringBuilder(HEAD);
+        StringBuilder result = new StringBuilder();
         Pattern pattern = Pattern.compile(REGEX_INDEX);
 
 
@@ -30,11 +31,25 @@ public class Runner25_ht6 {
                 String key = (String) item;
                 Matcher matcher = pattern.matcher(key);
                 if (matcher.matches()) {
-                    int i = Integer.parseInt(matcher.group(1));
-                    String value = properties.getProperty(key);
-                    System.out.println("key: " + key + "; val=" + value + "; i:" + i);
+                    try {
+                        int indexI = Integer.parseInt(matcher.group(1));
+                        int indexJ = Integer.parseInt(properties.getProperty(key));
+                        String valueKey = VALUE_KEY + indexI + indexJ;
+                        double valueK = Double.parseDouble(properties.getProperty(valueKey));
+                        sum += valueK;
+                        result.append((valueK>=0 ? PLUS : MINUS)).append(Math.abs(valueK));
+                    } catch (NumberFormatException | NullPointerException e) {
+                        errLines++;
+                    }
                 }
             }
+            if (result.length()>0 && result.charAt(0) == PLUS) {
+                result.deleteCharAt(0);
+            }
+            result.insert(0, HEAD);
+            result.append(EQUAL).append(sum);
+            System.out.println(result);
+            System.out.println("errorLines=" + errLines);
 
         } catch (IOException e) {
             e.printStackTrace();
