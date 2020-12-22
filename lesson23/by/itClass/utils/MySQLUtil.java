@@ -1,5 +1,6 @@
 package by.itClass.utils;
 
+import java.io.Closeable;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
@@ -7,14 +8,11 @@ import java.util.Objects;
 import java.util.Properties;
 
 
-public class MySQLUtil implements AutoCloseable {
+public class MySQLUtil implements Closeable {
     private final Connection cn;
-    private final Statement st;
-    private PreparedStatement pst;
-    private ResultSet rs;
 
-    public ResultSet getRs() {
-        return rs;
+    public Connection getCn() {
+        return cn;
     }
 
     public MySQLUtil(String filename) throws SQLException {
@@ -41,52 +39,14 @@ public class MySQLUtil implements AutoCloseable {
 
         // подключение БД
         cn = DriverManager.getConnection(url, user, password);
-        st = cn.createStatement();
-    }
-
-    /**
-     * Executes sql query in PreparedStatement pst
-     */
-    public void executeQuery() throws SQLException {
-        checkConnection();
-        if (Objects.nonNull(pst)) {
-            rs = pst.executeQuery();
-        } else {
-            throw new SQLException("Prepared statement is null");
-        }
-    }
-
-    /**
-     * Executes sql query
-     * @param sql query statement
-     */
-    public void executeQuery(String sql) throws SQLException {
-        checkConnection();
-        if (Objects.nonNull(st)) {
-            rs = st.executeQuery(sql);
-        } else {
-            throw new SQLException("Statement is null");
-        }
-    }
-
-    /**
-     * Creates PreparedStatement and stores it to pst
-     * @param sql query statement
-     */
-    public void prepareStatement(String sql) throws SQLException {
-        checkConnection();
-        pst = cn.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
     }
 
     @Override
     public void close() {
-        close(rs);
-        close(st);
-        close(pst);
         close(cn);
     }
 
-    private void close(AutoCloseable item) {
+    public MySQLUtil close(AutoCloseable item) {
         if (Objects.nonNull(item)) {
             try {
                 item.close();
@@ -94,12 +54,7 @@ public class MySQLUtil implements AutoCloseable {
                 e.printStackTrace();
             }
         }
-    }
-
-    private void checkConnection() throws SQLException {
-        if(Objects.isNull(cn) || cn.isClosed()) {
-            throw new SQLException("connection missed");
-        }
+        return this;
     }
 
     final static String DRIVER = "com.mysql.cj.jdbc.Driver";
