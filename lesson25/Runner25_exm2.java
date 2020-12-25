@@ -1,6 +1,8 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+/**
+ * REGEX
+ */
 public class Runner25_exm2 {
     public static void main(String[] args) {
         String regex = "(\\w+)@([a-z]+)\\.([a-z]+)";

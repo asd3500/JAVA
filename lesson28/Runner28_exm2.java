@@ -6,6 +6,9 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.IOException;
 
+/**
+ * XML
+ */
 public class Runner28_exm2 {
     public static void main(String[] args) {
         //XML

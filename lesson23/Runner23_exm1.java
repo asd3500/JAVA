@@ -1,5 +1,8 @@
 import java.sql.*;
 
+/**
+ * JDBC API
+ */
 public class Runner23_exm1 {
     public static void main(String[] args) {
         // JDBC API

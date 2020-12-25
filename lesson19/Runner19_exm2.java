@@ -4,6 +4,9 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
+/**
+ * Stream API
+ */
 public class Runner19_exm2 {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("Java", "C++", "PHP", "JavaScript", "VBasic");

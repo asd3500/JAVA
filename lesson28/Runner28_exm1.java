@@ -1,6 +1,9 @@
 import by.itClass.User28;
 import by.itClass.annotation.Table28;
 
+/**
+ * Annotation attributes
+ */
 public class Runner28_exm1 {
     public static void main(String[] args) {
         Class class1 = User28.class;

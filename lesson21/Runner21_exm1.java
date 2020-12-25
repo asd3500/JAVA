@@ -3,7 +3,9 @@ import by.itClass.User21;
 import java.util.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
-
+/**
+ * Stream API
+ */
 public class Runner21_exm1 {
     public static void main(String[] args) {
 

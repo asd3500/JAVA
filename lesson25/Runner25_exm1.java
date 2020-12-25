@@ -1,5 +1,8 @@
 import java.util.Arrays;
 
+/**
+ * REGEX
+ */
 public class Runner25_exm1 {
     public static void main(String[] args) {
         // регулярные выражения RegEx

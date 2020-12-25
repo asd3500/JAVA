@@ -1,3 +1,6 @@
+/**
+ * StringBuilder, StringBuffer
+ */
 public class Runner27_exm1 {
     public static void main(String[] args) {
         String str = "Java IT CLASS!";
