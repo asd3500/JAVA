@@ -4,7 +4,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
-public class UserHandler extends DefaultHandler {
+public class UserHandler28 extends DefaultHandler {
 
     @Override
     public void startDocument() throws SAXException {
