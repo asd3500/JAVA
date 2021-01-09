@@ -1,0 +1,15 @@
+http://www.itclass.by:8080/controllers/login?a=1&b=2
+____   ______________ ____ _________________ _______
+Сервлет - class Servlet
+init()
+service()
+destroy()
+
+HttpServlet extends Servlet
+
+doGet()
+doPost()
+doHead()
+...
+do...()
+

@@ -1,0 +1,3 @@
+1;Opel;White;170.5
+8;Mercedes;Black;270.5
+4;BMW;Red;280.9

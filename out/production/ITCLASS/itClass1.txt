@@ -1,0 +1,4 @@
+IT;85;90
+Sorting;21;30
+Sales;30;48
+Marketing;68;95
