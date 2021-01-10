@@ -11,6 +11,30 @@
     <welcome-file>index.js</welcome-file>
   </welcome-file-list>
 
+  <context-param>
+    <param-name>param1</param-name>
+    <param-value>IT CLASS</param-value>
+  </context-param>
+
+  <context-param>
+    <param-name>param2</param-name>
+    <param-value>Java Web</param-value>
+  </context-param>
+
+  <servlet>
+    <servlet-name>MainServlet</servlet-name>
+    <servlet-class>by.itClass.servlets.MainServlet</servlet-class>
+    <init-param>
+      <param-name>param3</param-name>
+      <param-value>param3 value</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>MainServlet</servlet-name>
+    <url-pattern>/main</url-pattern>
+  </servlet-mapping>
+
 
 </web-app>
         

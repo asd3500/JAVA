@@ -4,8 +4,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Title</title>
+        <link rel="stylesheet" href="./style/main.css">
     </head>
     <body>
         <h1>Hello world from Java Web!</h1>
+        <a href="./main">main</a>
+        <form action="/webapp1/formServ" method="post">
+            <input type="text" value="" name="text1" placeholder="text1"> <br>
+            <input type="text" value="" name="text2" placeholder="text2"> <br>
+            <input type="text" value="" name="text2" placeholder="text2"> <br>
+            <input type="password" value="" name="password" placeholder="password"> <br>
+            <fieldset>
+                <input type="radio" name="radio1" value="RADIO 1">radio 1
+                <input type="radio" name="radio1" VALUE="RADIO 2">radio 2 <br>
+                <input type="radio" name="radio1">radio 3 <br>
+            </fieldset>
+            <fieldset>
+                <input type="checkbox" name="checkbox1" value="chBox1Value"> checkbox1 <br>
+                <input type="checkbox" name="checkbox2"> checkbox2 <br>
+                <input type="checkbox" name="checkbox3"> checkbox3 <br>
+            </fieldset>
+            <input type="submit" value="Enter">
+        </form>
     </body>
 </html>
