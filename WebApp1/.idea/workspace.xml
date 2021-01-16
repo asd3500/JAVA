@@ -21,21 +21,23 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87168d8b-4927-4d99-a4a4-1492022ef581" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/itClass/beans/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/itClass/servlets/MainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/itClass/servlets/MainServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebApp1-1.0.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebApp1-1.0.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebApp1-1.0/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebApp1-1.0/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebApp1-1.0/WEB-INF/classes/by/itClass/servlets/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebApp1-1.0/WEB-INF/classes/by/itClass/servlets/MainServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/WebApp1-1.0/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebApp1-1.0/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/WebApp1-1.0/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/WebApp1-1.0/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/itClass/servlets/MainServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/itClass/servlets/MainServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +49,8 @@
       <list>
         <option value="SCSS File" />
         <option value="CSS File" />
+        <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -68,6 +72,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -231,8 +236,20 @@
       <option name="presentableId" value="Default" />
       <updated>1610202969438</updated>
       <workItem from="1610202970723" duration="455000" />
-      <workItem from="1610265615257" duration="9807000" />
+      <workItem from="1610265615257" duration="9957000" />
+      <workItem from="1610280494519" duration="594000" />
+      <workItem from="1610630615685" duration="5354000" />
+      <workItem from="1610652141539" duration="101000" />
+      <workItem from="1610785804184" duration="8010000" />
     </task>
+    <task id="LOCAL-00001" summary="webApp1 10.01.2020">
+      <created>1610276075699</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610276075699</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,11 +260,28 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="webApp1 10.01.2020" />
+    <option name="LAST_COMMIT_MESSAGE" value="webApp1 10.01.2020" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1258" y="34" key="#HTML" timestamp="1610269709369">
@@ -266,26 +300,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="828" y="181" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610203317956" />
-    <state x="1153" y="267" key="FileChooserDialogImpl" timestamp="1610203101794">
+    <state x="1275" y="237" key="#com.intellij.ide.util.MemberChooser" timestamp="1610790558967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1153" y="267" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610203101794" />
-    <state width="574" height="279" key="GridCell.Tab.0.bottom" timestamp="1610275904912">
+    <state x="1275" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1610790558967" />
+    <state x="1153" y="267" key="FileChooserDialogImpl" timestamp="1610630877654">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="574" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610275904912" />
-    <state width="574" height="279" key="GridCell.Tab.0.center" timestamp="1610275904912">
+    <state x="1153" y="267" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610630877654" />
+    <state width="574" height="279" key="GridCell.Tab.0.bottom" timestamp="1610276115855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="574" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610275904912" />
-    <state width="574" height="279" key="GridCell.Tab.0.left" timestamp="1610275904912">
+    <state width="574" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610276115855" />
+    <state width="574" height="279" key="GridCell.Tab.0.center" timestamp="1610276115855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="574" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610275904912" />
-    <state width="574" height="279" key="GridCell.Tab.0.right" timestamp="1610275904912">
+    <state width="574" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610276115855" />
+    <state width="574" height="279" key="GridCell.Tab.0.left" timestamp="1610276115855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="574" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610275904912" />
+    <state width="574" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610276115855" />
+    <state width="574" height="279" key="GridCell.Tab.0.right" timestamp="1610276115855">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="574" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610276115855" />
     <state width="574" height="279" key="GridCell.Tab.1.bottom" timestamp="1610266067197">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -322,5 +360,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="171" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1610203359060" />
+    <state x="1049" y="259" key="Vcs.Push.Dialog.v2" timestamp="1610276095599">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1049" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610276095599" />
+    <state x="407" y="227" key="new project wizard" timestamp="1610630938869">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="407" y="227" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1610630938869" />
   </component>
 </project>
