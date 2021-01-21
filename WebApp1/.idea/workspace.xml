@@ -21,19 +21,10 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87168d8b-4927-4d99-a4a4-1492022ef581" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../WebApp2/WebApp2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="87168d8b-4927-4d99-a4a4-1492022ef581" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,6 +51,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1mpuhAmc4XXB9shfnJ5yRHgGYtB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -70,7 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebApp2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -308,9 +300,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1275" y="237" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1610790558967" />
-    <state x="1153" y="267" key="FileChooserDialogImpl" timestamp="1610901870319">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="820" y="189" key="FileChooserDialogImpl" timestamp="1611062892839">
+      <screen x="0" y="0" width="1366" height="738" />
     </state>
+    <state x="820" y="189" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1611062892839" />
     <state x="1153" y="267" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1610901870319" />
     <state width="574" height="278" key="GridCell.Tab.0.bottom" timestamp="1610794544463">
       <screen x="0" y="0" width="1920" height="1040" />

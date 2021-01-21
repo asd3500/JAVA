@@ -1,0 +1,132 @@
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 7rem;
+  text-align: center;
+}
+
+.alert {
+  color: #710808;
+  font-weight: bold;
+}
+
+.upper-bar {
+  margin: 0 auto 0 auto;
+  background: grey;
+  height: 4rem;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 0 1rem 1rem;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+  -webkit-transition: -webkit-transform ease 500ms;
+  transition: -webkit-transform ease 500ms;
+  transition: transform ease 500ms;
+  transition: transform ease 500ms, -webkit-transform ease 500ms;
+}
+
+.upper-bar__link {
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.upper-bar:hover {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.flex-left {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.flex-right {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.hide-left {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform ease 500ms;
+  transition: -webkit-transform ease 500ms;
+  transition: transform ease 500ms;
+  transition: transform ease 500ms, -webkit-transform ease 500ms;
+}
+
+.hide-right {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform ease 500ms;
+  transition: -webkit-transform ease 500ms;
+  transition: transform ease 500ms;
+  transition: transform ease 500ms, -webkit-transform ease 500ms;
+}
+
+.form {
+  margin: 20px 20px 0 20px;
+  padding: 5px;
+  background: gray;
+  width: 350px;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.form__title {
+  font-size: 3rem;
+}
+
+.form__label {
+  font-size: 2rem;
+}
+
+.form__input {
+  width: 80%;
+  text-align: right;
+  font-size: 2rem;
+}
+
+.form__submit {
+  display: block;
+  margin: 5px auto 0 auto;
+}
+
+.button-back {
+  display: inline-block;
+  margin: 20px 20px 0 20px;
+  padding: 5px;
+  background: gray;
+  border-radius: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+/*# sourceMappingURL=main.css.map */
