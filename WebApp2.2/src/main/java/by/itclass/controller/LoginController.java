@@ -27,18 +27,12 @@ public class LoginController extends HttpServlet {
         String login = request.getParameter(LOGIN_LABEL);
         String password = request.getParameter(PASSWORD_LABEL);
 
-        if (Objects.isNull(login) || Objects.isNull(password)) {
-            ControllerUtil.jumpMess(LOGIN_JSP, NULL_LOGIN_OR_PASS_MESSAGE, request, response);
-            return;
-        } else if (login.isEmpty() || password.isEmpty()) {
-            ControllerUtil.jumpMess(LOGIN_JSP, EMPTY_LOGIN_OR_PASS_MESSAGE, request, response);
-            return;
-        }
-
+        login = login.trim();
+        password = password.trim();
         User user = userService.get(login, password);
 
         if (Objects.nonNull(user)) {
-            request = userService.addAttr(request, user);
+            ControllerUtil.addUserAttr(request, user);
             ControllerUtil.jump(INDEX_JSP, request, response);
         } else {
             ControllerUtil.jumpMess(LOGIN_JSP, INCORRECT_LOGIN_OR_PASS_MESSAGE, request, response);
