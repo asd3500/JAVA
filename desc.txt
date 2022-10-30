@@ -1,0 +1,30 @@
+#1 hello, output, var types
+#2 arrays, loop, if, switch, input
+#3 string, type conv, wrapers
+#4 OOP
+#5 OOP comparators
+#6 enums, abstracts
+#7 interface, Number.class
+#8 anonymous classes
+#9 inner (local, static)
+#10 equals, hashcode, Class, Field
+
+#12 exceptions
+#13 streams(byte)
+
+#15 streams(char), scanner try-catch-res, object from file
+#16 generic, Collection, ArrayList, LinkedList
+#17 HashSet, LinkedHashSet, TreeSet, Queue
+#18 Map, HashMap, Entry, TreeMap
+#19 @Functional interface, stream API,
+
+#21 stream API, Date, LocalDate
+#22 MySQL
+#23 JDBC API
+
+#25 REGEX
+#26 @annotations
+#27 StringBuilder, StringBuffer, *.properties
+#28 annotation attr, XML SAX
+#29 XML DOM
+#30 XML StAX, JAXB
